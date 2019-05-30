@@ -10,12 +10,12 @@ with open('LICENSE.txt') as f:
     license = f.read()
 
 setup(
-    name='sample',
+    name='Antibiograms',
     version='0.1.0',
-    description='Sample package description',
+    description='First version of the Antibiograms research project',
     long_description=readme,
-    author='<author_name>',
-    author_email='author@example.com',
+    author='Alex Calle',
+    author_email='alex.calle.clavel@gmail.com',
     url='',
     license=license,
     packages=find_packages(exclude=('tests'))
