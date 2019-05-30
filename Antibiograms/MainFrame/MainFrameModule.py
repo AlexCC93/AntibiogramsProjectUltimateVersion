@@ -17,10 +17,29 @@ import wx.xrc
 class MainFrameClass ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Antibiogramas UCB ", pos = wx.DefaultPosition, size = wx.Size( 500,300 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Antibiogramas UCB ", pos = wx.DefaultPosition, size = wx.Size( 1500,800 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
+		bSizer1 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_panel1 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer1.Add( self.m_panel1, 3, wx.EXPAND |wx.ALL, 5 )
+
+		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		gbSizer1 = wx.GridBagSizer( 0, 0 )
+		gbSizer1.SetFlexibleDirection( wx.BOTH )
+		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+
+
+		self.m_panel2.SetSizer( gbSizer1 )
+		self.m_panel2.Layout()
+		gbSizer1.Fit( self.m_panel2 )
+		bSizer1.Add( self.m_panel2, 2, wx.EXPAND |wx.ALL, 0 )
+
+
+		self.SetSizer( bSizer1 )
+		self.Layout()
 
 		self.Centre( wx.BOTH )
 
