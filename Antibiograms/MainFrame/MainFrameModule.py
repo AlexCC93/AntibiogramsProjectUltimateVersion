@@ -31,6 +31,9 @@ class MainFrameClass ( wx.Frame ):
 		gbSizer1.SetFlexibleDirection( wx.BOTH )
 		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
+		self.m_bitmap1 = wx.StaticBitmap( self.m_panel2, wx.ID_ANY, wx.Bitmap( u"D:\Alex 2019\Antibiogramas\AntibiogramsProjectUltimateVersion\Images\little.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		gbSizer1.Add( self.m_bitmap1, wx.GBPosition( 0, 60 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
+
 
 		self.m_panel2.SetSizer( gbSizer1 )
 		self.m_panel2.Layout()
