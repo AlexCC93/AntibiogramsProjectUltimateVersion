@@ -32,7 +32,7 @@ class MainFrameClass ( wx.Frame ):
 		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
 		self.UCBlogoBitmap = wx.StaticBitmap( self.rightPartPanel, wx.ID_ANY, wx.NullBitmap, wx.Point( -1,-1 ), wx.DefaultSize, 0 )
-		gbSizer1.Add( self.UCBlogoBitmap, wx.GBPosition( 0, 60 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
+		gbSizer1.Add( self.UCBlogoBitmap, wx.GBPosition( 0, 100 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 
 
 		self.rightPartPanel.SetSizer( gbSizer1 )

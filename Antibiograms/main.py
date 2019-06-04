@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from MainFrame.MainFrameModule import MainFrameClass as MF
+from MainFrame.MainFrameEvents import MainFrameEventsClass as MF
 import wx
 
 if __name__=='__main__':
