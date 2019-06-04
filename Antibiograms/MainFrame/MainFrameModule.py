@@ -21,32 +21,40 @@ class MainFrameClass ( wx.Frame ):
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
-		bSizer1 = wx.BoxSizer( wx.HORIZONTAL )
+		primaryBoxSizer = wx.BoxSizer( wx.HORIZONTAL )
 
-		self.m_panel1 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer1.Add( self.m_panel1, 3, wx.EXPAND |wx.ALL, 5 )
+		self.leftPartPanel = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		primaryBoxSizer.Add( self.leftPartPanel, 3, wx.EXPAND |wx.ALL, 0 )
 
-		self.m_panel2 = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		self.rightPartPanel = wx.Panel( self, wx.ID_ANY, wx.Point( 0,1 ), wx.DefaultSize, wx.TAB_TRAVERSAL )
 		gbSizer1 = wx.GridBagSizer( 0, 0 )
 		gbSizer1.SetFlexibleDirection( wx.BOTH )
 		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.m_bitmap1 = wx.StaticBitmap( self.m_panel2, wx.ID_ANY, wx.Bitmap( u"D:\Alex 2019\Antibiogramas\AntibiogramsProjectUltimateVersion\Images\little.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
-		gbSizer1.Add( self.m_bitmap1, wx.GBPosition( 0, 60 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
+		self.UCBlogoBitmap = wx.StaticBitmap( self.rightPartPanel, wx.ID_ANY, wx.NullBitmap, wx.Point( -1,-1 ), wx.DefaultSize, 0 )
+		gbSizer1.Add( self.UCBlogoBitmap, wx.GBPosition( 0, 60 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
 
 
-		self.m_panel2.SetSizer( gbSizer1 )
-		self.m_panel2.Layout()
-		gbSizer1.Fit( self.m_panel2 )
-		bSizer1.Add( self.m_panel2, 2, wx.EXPAND |wx.ALL, 0 )
+		self.rightPartPanel.SetSizer( gbSizer1 )
+		self.rightPartPanel.Layout()
+		gbSizer1.Fit( self.rightPartPanel )
+		primaryBoxSizer.Add( self.rightPartPanel, 2, wx.EXPAND |wx.ALL, 0 )
 
 
-		self.SetSizer( bSizer1 )
+		self.SetSizer( primaryBoxSizer )
 		self.Layout()
 
 		self.Centre( wx.BOTH )
 
+		# Connect Events
+		self.UCBlogoBitmap.Bind( wx.EVT_ERASE_BACKGROUND, self.loadImage )
+
 	def __del__( self ):
 		pass
+
+
+	# Virtual event handlers, overide them in your derived class
+	def loadImage( self, event ):
+		event.Skip()
 
 
