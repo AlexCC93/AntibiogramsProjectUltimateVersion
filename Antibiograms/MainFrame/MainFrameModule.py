@@ -31,8 +31,17 @@ class MainFrameClass ( wx.Frame ):
 		gbSizer1.SetFlexibleDirection( wx.BOTH )
 		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.UCBlogoBitmap = wx.StaticBitmap( self.rightPartPanel, wx.ID_ANY, wx.NullBitmap, wx.Point( -1,-1 ), wx.DefaultSize, 0 )
-		gbSizer1.Add( self.UCBlogoBitmap, wx.GBPosition( 0, 100 ), wx.GBSpan( 1, 1 ), wx.ALL, 5 )
+		self.logoContainerPanel = wx.Panel( self.rightPartPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizerLogo = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.UCBlogoBitmap = wx.StaticBitmap( self.logoContainerPanel, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizerLogo.Add( self.UCBlogoBitmap, 1, wx.ALL, 5 )
+
+
+		self.logoContainerPanel.SetSizer( bSizerLogo )
+		self.logoContainerPanel.Layout()
+		bSizerLogo.Fit( self.logoContainerPanel )
+		gbSizer1.Add( self.logoContainerPanel, wx.GBPosition( 0, 30 ), wx.GBSpan( 20, 30 ), wx.EXPAND |wx.ALL, 0 )
 
 
 		self.rightPartPanel.SetSizer( gbSizer1 )
@@ -47,7 +56,7 @@ class MainFrameClass ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
-		self.UCBlogoBitmap.Bind( wx.EVT_ERASE_BACKGROUND, self.loadImage )
+		self.UCBlogoBitmap.Bind( wx.EVT_PAINT, self.loadImage )
 
 	def __del__( self ):
 		pass

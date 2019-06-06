@@ -11,4 +11,5 @@ class MainFrameEventsClass(MFM.MainFrameClass):
         MFM.MainFrameClass.__init__(self,parent)
 
     def loadImage( self, event ):
-        self.UCBlogoBitmap = wx.StaticBitmap( self.rightPartPanel, wx.ID_ANY, wx.Bitmap(u"D:\Alex 2019\Antibiogramas\AntibiogramsProjectUltimateVersion\Images\little.png", wx.BITMAP_TYPE_ANY), wx.Point( -1,-1 ), wx.DefaultSize, 0 )
+        self.UCBlogoBitmap = wx.StaticBitmap( self.logoContainerPanel, wx.ID_ANY, wx.Bitmap(u"D:\Alex 2019\Antibiogramas\AntibiogramsProjectUltimateVersion\Images\imageTest.jpg", wx.BITMAP_TYPE_ANY), wx.DefaultPosition, wx.DefaultSize, 0 )
+        
