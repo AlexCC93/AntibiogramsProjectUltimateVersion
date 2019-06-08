@@ -156,6 +156,7 @@ class MainFrameClass ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.StartButton.Bind( wx.EVT_BUTTON, self.openStartFrame )
 		self.UCBlogoBitmap.Bind( wx.EVT_PAINT, self.loadImage )
 
 	def __del__( self ):
@@ -163,6 +164,9 @@ class MainFrameClass ( wx.Frame ):
 
 
 	# Virtual event handlers, overide them in your derived class
+	def openStartFrame( self, event ):
+		event.Skip()
+
 	def loadImage( self, event ):
 		event.Skip()
 
