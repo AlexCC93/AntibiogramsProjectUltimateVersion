@@ -1,27 +1,34 @@
-#importing wx files
+#importing files
 import wx
- 
+import os 
 #import the newly created GUI file
 import MainFrameModule as MFM
 
 def scale_bitmapImage(bitmap, width, height):
-    image = wx.ImageFromBitmap(bitmap)
+    image = bitmap.ConvertToImage()
     image = image.Scale(width, height, wx.IMAGE_QUALITY_HIGH)
-    result = wx.BitmapFromImage(image)
+    result = wx.Bitmap(image)
     return result   
 
 
-class MainFrameEventsClass(MFM.MainFrameClass):
+class MainFrameEventsClass(MFM.MainFrameClass):    
     #constructor
     def __init__(self,parent):
         #initialize parent class
         MFM.MainFrameClass.__init__(self,parent)
     
     def loadImage( self, event ):
-        ImgInBitmap = wx.Bitmap(u"D:\Alex 2019\Antibiogramas\AntibiogramsProjectUltimateVersion\Images\logo.gif")
+        relPath = "Images/logo.gif"
+        imgPath = os.path.join(self.getProjectPath(), relPath)
+
+        ImgInBitmap = wx.Bitmap(imgPath)
         New_Width=ImgInBitmap.GetWidth()*0.35
         New_Height=ImgInBitmap.GetHeight()*0.35
         ImgInBitmap = scale_bitmapImage(ImgInBitmap,New_Width,New_Height)
         self.UCBlogoBitmap = wx.StaticBitmap( self.logoContainerPanel, wx.ID_ANY, ImgInBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
-    
-     
+
+    def getProjectPath(self):
+        fileDir = os.path.dirname(os.path.abspath(__file__))
+        parentDir = os.path.dirname(fileDir)
+        mainDir = os.path.dirname(parentDir)
+        return mainDir
