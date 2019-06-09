@@ -3,6 +3,8 @@ import wx
 import os 
 #import the newly created GUI file
 import MainFrameModule as MFM
+from StartFrame.StartFrameEvents import StartFrameEventsClass as SF
+
 
 def scale_bitmapImage(bitmap, width, height):
     image = bitmap.ConvertToImage()
@@ -32,3 +34,9 @@ class MainFrameEventsClass(MFM.MainFrameClass):
         parentDir = os.path.dirname(fileDir)
         mainDir = os.path.dirname(parentDir)
         return mainDir
+
+    def openStartFrame( self, event ):
+        StartFrame=SF(self)                                      
+        StartFrame.Show()
+
+        
