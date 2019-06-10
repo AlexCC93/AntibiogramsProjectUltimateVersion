@@ -111,30 +111,42 @@ class MainFrameClass ( wx.Frame ):
 		primaryBoxSizer.Add( self.leftPartPanel, 8, wx.EXPAND |wx.ALL, 0 )
 
 		self.rightPartPanel = wx.Panel( self, wx.ID_ANY, wx.Point( 0,1 ), wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer17 = wx.BoxSizer( wx.VERTICAL )
+		gbSizer1 = wx.GridBagSizer( 0, 0 )
+		gbSizer1.SetFlexibleDirection( wx.BOTH )
+		gbSizer1.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+
+		self.logoContainerPanel = wx.Panel( self.rightPartPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizerLogo = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.UCBlogoBitmap = wx.StaticBitmap( self.logoContainerPanel, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizerLogo.Add( self.UCBlogoBitmap, 1, wx.ALL, 5 )
 
 
-		bSizer17.Add( ( 0, 0), 1, wx.EXPAND, 5 )
+		self.logoContainerPanel.SetSizer( bSizerLogo )
+		self.logoContainerPanel.Layout()
+		bSizerLogo.Fit( self.logoContainerPanel )
+		gbSizer1.Add( self.logoContainerPanel, wx.GBPosition( 0, 30 ), wx.GBSpan( 20, 30 ), wx.EXPAND |wx.ALL, 0 )
 
-		self.m_panel21 = wx.Panel( self.rightPartPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer18 = wx.BoxSizer( wx.HORIZONTAL )
+		self.labelContainerPanel = wx.Panel( self.rightPartPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer3 = wx.BoxSizer( wx.HORIZONTAL )
 
-		self.m_bitmap7 = wx.StaticBitmap( self.m_panel21, wx.ID_ANY, wx.NullBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer18.Add( self.m_bitmap7, 10, wx.ALIGN_LEFT|wx.ALL|wx.EXPAND|wx.LEFT, 5 )
+		self.IngMecLabel = wx.StaticText( self.labelContainerPanel, wx.ID_ANY, u"Ingeniería Mecatrónica", wx.DefaultPosition, wx.Size( -1,-1 ), 0 )
+		self.IngMecLabel.Wrap( -1 )
 
+		self.IngMecLabel.SetFont( wx.Font( 25, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
 
-		self.m_panel21.SetSizer( bSizer18 )
-		self.m_panel21.Layout()
-		bSizer18.Fit( self.m_panel21 )
-		bSizer17.Add( self.m_panel21, 2, wx.EXPAND |wx.ALL, 5 )
-
-
-		bSizer17.Add( ( 0, 0), 1, wx.EXPAND, 5 )
+		bSizer3.Add( self.IngMecLabel, 1, wx.ALIGN_BOTTOM|wx.ALL, 5 )
 
 
-		self.rightPartPanel.SetSizer( bSizer17 )
+		self.labelContainerPanel.SetSizer( bSizer3 )
+		self.labelContainerPanel.Layout()
+		bSizer3.Fit( self.labelContainerPanel )
+		gbSizer1.Add( self.labelContainerPanel, wx.GBPosition( 36, 20 ), wx.GBSpan( 1, 40 ), wx.EXPAND |wx.ALL, 5 )
+
+
+		self.rightPartPanel.SetSizer( gbSizer1 )
 		self.rightPartPanel.Layout()
-		bSizer17.Fit( self.rightPartPanel )
+		gbSizer1.Fit( self.rightPartPanel )
 		primaryBoxSizer.Add( self.rightPartPanel, 6, wx.EXPAND |wx.ALL, 0 )
 
 
@@ -145,7 +157,7 @@ class MainFrameClass ( wx.Frame ):
 
 		# Connect Events
 		self.StartButton.Bind( wx.EVT_BUTTON, self.openStartFrame )
-		self.m_bitmap7.Bind( wx.EVT_PAINT, self.loadImage )
+		self.UCBlogoBitmap.Bind( wx.EVT_PAINT, self.loadImage )
 
 	def __del__( self ):
 		pass
