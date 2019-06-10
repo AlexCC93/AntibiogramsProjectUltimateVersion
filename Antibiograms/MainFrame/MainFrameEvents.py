@@ -3,7 +3,7 @@ import wx
 import os 
 #import the newly created GUI file
 import MainFrameModule as MFM
-from Antibiograms.StartFrame.StartFrameEvents import StartFrameEventsClass as SF
+from StartFrame.StartFrameEvents import StartFrameEventsClass as SF
 
 
 def scale_bitmapImage(bitmap, width, height):
