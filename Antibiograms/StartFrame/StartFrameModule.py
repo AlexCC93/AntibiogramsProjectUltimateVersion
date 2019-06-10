@@ -80,8 +80,8 @@ class StartFrameClass ( wx.Frame ):
 
 		fgSizer1.Add( self.m_staticText5, 0, wx.ALL, 5 )
 
-		self.m_textCtrl5 = wx.TextCtrl( self.m_panel7, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer1.Add( self.m_textCtrl5, 0, wx.ALL, 5 )
+		self.AntibioticsTextBox = wx.TextCtrl( self.m_panel7, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer1.Add( self.AntibioticsTextBox, 0, wx.ALL, 5 )
 
 		self.m_staticText6 = wx.StaticText( self.m_panel7, wx.ID_ANY, u"Número de halos detectados:", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText6.Wrap( -1 )
@@ -90,8 +90,8 @@ class StartFrameClass ( wx.Frame ):
 
 		fgSizer1.Add( self.m_staticText6, 0, wx.ALL, 5 )
 
-		self.m_textCtrl6 = wx.TextCtrl( self.m_panel7, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		fgSizer1.Add( self.m_textCtrl6, 0, wx.ALL, 5 )
+		self.HalosTextBox = wx.TextCtrl( self.m_panel7, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+		fgSizer1.Add( self.HalosTextBox, 0, wx.ALL, 5 )
 
 
 		self.m_panel7.SetSizer( fgSizer1 )
@@ -314,7 +314,15 @@ class StartFrameClass ( wx.Frame ):
 
 		self.Centre( wx.BOTH )
 
+		# Connect Events
+		self.startRecognitionButton.Bind( wx.EVT_BUTTON, self.RunHaloDetection )
+
 	def __del__( self ):
 		pass
+
+
+	# Virtual event handlers, overide them in your derived class
+	def RunHaloDetection( self, event ):
+		event.Skip()
 
 
