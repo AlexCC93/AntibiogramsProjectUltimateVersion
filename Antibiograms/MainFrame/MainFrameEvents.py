@@ -25,6 +25,7 @@ class MainFrameEventsClass(MFM.MainFrameClass):
 
         ImgInBitmap = wx.Bitmap(imgPath)
         New_Width=ImgInBitmap.GetWidth()*0.35
+        ## This a new branch
         New_Height=ImgInBitmap.GetHeight()*0.35
         ImgInBitmap = scale_bitmapImage(ImgInBitmap,New_Width,New_Height)
         self.UCBlogoBitmap = wx.StaticBitmap( self.logoContainerPanel, wx.ID_ANY, ImgInBitmap, wx.DefaultPosition, wx.DefaultSize, 0 )
