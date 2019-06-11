@@ -11,10 +11,10 @@ import wx
 import wx.xrc
 
 ###########################################################################
-## Class MainFrameClass
+## Class MainFrame
 ###########################################################################
 
-class MainFrameClass ( wx.Frame ):
+class MainFrame ( wx.Frame ):
 
 	def __init__( self, parent ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Antibiogramas UCB ", pos = wx.DefaultPosition, size = wx.Size( 1500,800 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
@@ -145,7 +145,7 @@ class MainFrameClass ( wx.Frame ):
 
 		# Connect Events
 		self.StartButton.Bind( wx.EVT_BUTTON, self.openStartFrame )
-		self.m_bitmap7.Bind( wx.EVT_PAINT, self.loadImage )
+		# self.m_bitmap7.Bind( wx.EVT_PAINT, self.loadImage )
 
 	def __del__( self ):
 		pass
