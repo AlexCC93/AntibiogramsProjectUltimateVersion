@@ -145,7 +145,7 @@ class MainFrame ( wx.Frame ):
 
 		# Connect Events
 		self.StartButton.Bind( wx.EVT_BUTTON, self.openStartFrame )
-		# self.m_bitmap7.Bind( wx.EVT_PAINT, self.loadImage )
+		self.m_bitmap7.Bind( wx.EVT_PAINT, self.loadImage )
 
 	def __del__( self ):
 		pass
