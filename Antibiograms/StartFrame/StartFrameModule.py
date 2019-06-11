@@ -121,182 +121,14 @@ class StartFrame ( wx.Frame ):
 		bSizer61.Add( ( 0, 0), 1, wx.EXPAND, 5 )
 
 		self.m_panel6 = wx.Panel( self.rightPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		fgSizer2 = wx.FlexGridSizer( 7, 4, 0, 7 )
-		fgSizer2.SetFlexibleDirection( wx.BOTH )
-		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+		fgSizer3 = wx.FlexGridSizer( 0, 2, 0, 0 )
+		fgSizer3.SetFlexibleDirection( wx.BOTH )
+		fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-		self.m_staticText9 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 1:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText9.Wrap( -1 )
 
-		self.m_staticText9.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText9, 0, wx.ALL, 5 )
-
-		self.m_textCtrl9 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl9.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl9, 0, wx.ALL, 5 )
-
-		self.m_staticText10 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 1:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText10.Wrap( -1 )
-
-		self.m_staticText10.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText10, 0, wx.ALL, 5 )
-
-		self.m_textCtrl10 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl10.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl10, 0, wx.ALL, 5 )
-
-		self.m_staticText11 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 2:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText11.Wrap( -1 )
-
-		self.m_staticText11.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText11, 0, wx.ALL, 5 )
-
-		self.m_textCtrl11 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl11.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl11, 0, wx.ALL, 5 )
-
-		self.m_staticText12 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 2:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText12.Wrap( -1 )
-
-		self.m_staticText12.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText12, 0, wx.ALL, 5 )
-
-		self.m_textCtrl12 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl12.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl12, 0, wx.ALL, 5 )
-
-		self.m_staticText32 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 3:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText32.Wrap( -1 )
-
-		self.m_staticText32.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText32, 0, wx.ALL, 5 )
-
-		self.m_textCtrl21 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl21.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl21, 0, wx.ALL, 5 )
-
-		self.m_staticText33 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 3:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText33.Wrap( -1 )
-
-		self.m_staticText33.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText33, 0, wx.ALL, 5 )
-
-		self.m_textCtrl22 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl22.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl22, 0, wx.ALL, 5 )
-
-		self.m_staticText34 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 4:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText34.Wrap( -1 )
-
-		self.m_staticText34.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText34, 0, wx.ALL, 5 )
-
-		self.m_textCtrl23 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl23.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl23, 0, wx.ALL, 5 )
-
-		self.m_staticText35 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 4:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText35.Wrap( -1 )
-
-		self.m_staticText35.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText35, 0, wx.ALL, 5 )
-
-		self.m_textCtrl24 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl24.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl24, 0, wx.ALL, 5 )
-
-		self.m_staticText36 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 5:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText36.Wrap( -1 )
-
-		self.m_staticText36.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText36, 0, wx.ALL, 5 )
-
-		self.m_textCtrl25 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl25.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl25, 0, wx.ALL, 5 )
-
-		self.m_staticText37 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 5:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText37.Wrap( -1 )
-
-		self.m_staticText37.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText37, 0, wx.ALL, 5 )
-
-		self.m_textCtrl26 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl26.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl26, 0, wx.ALL, 5 )
-
-		self.m_staticText42 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 6:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText42.Wrap( -1 )
-
-		self.m_staticText42.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText42, 0, wx.ALL, 5 )
-
-		self.m_textCtrl27 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl27.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl27, 0, wx.ALL, 5 )
-
-		self.m_staticText44 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 6:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText44.Wrap( -1 )
-
-		self.m_staticText44.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText44, 0, wx.ALL, 5 )
-
-		self.m_textCtrl28 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl28.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl28, 0, wx.ALL, 5 )
-
-		self.m_staticText45 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Halo 7:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText45.Wrap( -1 )
-
-		self.m_staticText45.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText45, 0, wx.ALL, 5 )
-
-		self.m_textCtrl29 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl29.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl29, 0, wx.ALL, 5 )
-
-		self.m_staticText46 = wx.StaticText( self.m_panel6, wx.ID_ANY, u"Antibiótico 7:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText46.Wrap( -1 )
-
-		self.m_staticText46.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_staticText46, 0, wx.ALL, 5 )
-
-		self.m_textCtrl30 = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_textCtrl30.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
-
-		fgSizer2.Add( self.m_textCtrl30, 0, wx.ALL, 5 )
-
-
-		self.m_panel6.SetSizer( fgSizer2 )
+		self.m_panel6.SetSizer( fgSizer3 )
 		self.m_panel6.Layout()
-		fgSizer2.Fit( self.m_panel6 )
+		fgSizer3.Fit( self.m_panel6 )
 		bSizer61.Add( self.m_panel6, 9, wx.EXPAND |wx.ALL, 5 )
 
 
@@ -315,14 +147,14 @@ class StartFrame ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
-		self.startRecognitionButton.Bind( wx.EVT_BUTTON, self.RunHaloDetection )
+		self.startRecognitionButton.Bind( wx.EVT_BUTTON, self.RunProcess )
 
 	def __del__( self ):
 		pass
 
 
 	# Virtual event handlers, overide them in your derived class
-	def RunHaloDetection( self, event ):
+	def RunProcess( self, event ):
 		event.Skip()
 
 
