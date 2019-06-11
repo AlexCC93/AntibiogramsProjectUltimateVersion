@@ -5,11 +5,11 @@ import random
 #import the newly created GUI file
 import StartFrameModule as SFM
 
-class StartFrameEventsClass(SFM.StartFrameClass):    
+class StartFrameEvents(SFM.StartFrame):    
     #constructor
     def __init__(self,parent):
         #initialize parent class
-        SFM.StartFrameClass.__init__(self,parent)
+        SFM.StartFrame.__init__(self,parent)
     
     def RunHaloDetection(self, event):
         numHalos=random.randint(1,7)
