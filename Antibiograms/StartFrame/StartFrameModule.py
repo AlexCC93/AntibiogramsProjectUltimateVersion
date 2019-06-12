@@ -121,14 +121,6 @@ class StartFrame ( wx.Frame ):
 		bSizer61.Add( ( 0, 0), 1, wx.EXPAND, 5 )
 
 		self.m_panel6 = wx.Panel( self.rightPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		fgSizer3 = wx.FlexGridSizer( 0, 2, 0, 0 )
-		fgSizer3.SetFlexibleDirection( wx.BOTH )
-		fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
-
-
-		self.m_panel6.SetSizer( fgSizer3 )
-		self.m_panel6.Layout()
-		fgSizer3.Fit( self.m_panel6 )
 		bSizer61.Add( self.m_panel6, 9, wx.EXPAND |wx.ALL, 5 )
 
 
