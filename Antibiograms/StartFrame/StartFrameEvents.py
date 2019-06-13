@@ -39,14 +39,16 @@ class StartFrameEvents(SFM.StartFrame):
             newLabel = wx.StaticText(self.m_panel6, wx.ID_ANY, u"Halo %s" % cont, wx.DefaultPosition, wx.DefaultSize, 0 )             
             newLabel.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
             newLabel.Wrap( -1 )
-            # newTxtCtrl = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-            # newTxtCtrl.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
+
             if x==0:
                 fgSizer3 = wx.FlexGridSizer( 0, 4, 0, 0 )
                 fgSizer3.SetFlexibleDirection( wx.BOTH )
                 fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
             fgSizer3.Add( newLabel, 0, wx.ALL, 5 )    
-            # fgSizer3.Add( newTxtCtrl, 0, wx.ALL, 5 )
+
+            newTxtCtrl = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+            newTxtCtrl.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
+            fgSizer3.Add( newTxtCtrl, 0, wx.ALL, 5 )
             if x==(sections-1):
                 self.m_panel6.SetSizer( fgSizer3 )
                 self.m_panel6.Layout()
