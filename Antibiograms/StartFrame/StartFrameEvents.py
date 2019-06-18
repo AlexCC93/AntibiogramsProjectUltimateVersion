@@ -32,8 +32,8 @@ class StartFrameEvents(SFM.StartFrame):
     def DrawResultsSection(self):
         sections = numHalos
         print(sections)
+        self.m_panel6.DestroyChildren()
         for x in range(sections):
-            print("hello im in grid sizer")
             cont=x+1
             label = "Halo %s" % cont
             newLabel = wx.StaticText(self.m_panel6, wx.ID_ANY, u"Halo %s" % cont, wx.DefaultPosition, wx.DefaultSize, 0 )             
@@ -44,7 +44,7 @@ class StartFrameEvents(SFM.StartFrame):
                 fgSizer3 = wx.FlexGridSizer( 0, 4, 0, 0 )
                 fgSizer3.SetFlexibleDirection( wx.BOTH )
                 fgSizer3.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
-            fgSizer3.Add( newLabel, 0, wx.ALL, 5 )    
+            fgSizer3.Add( newLabel, 0, wx.ALL, 5 )
 
             newTxtCtrl = wx.TextCtrl( self.m_panel6, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
             newTxtCtrl.SetFont( wx.Font( 20, wx.FONTFAMILY_DEFAULT, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL, False, wx.EmptyString ) )
@@ -54,4 +54,5 @@ class StartFrameEvents(SFM.StartFrame):
                 self.m_panel6.Layout()
                 fgSizer3.Fit( self.m_panel6 )
             # calledSizer=self.GetSizer()
+
 
