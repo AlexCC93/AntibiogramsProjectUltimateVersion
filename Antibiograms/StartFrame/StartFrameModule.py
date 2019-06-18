@@ -120,8 +120,8 @@ class StartFrame ( wx.Frame ):
 
 		bSizer61.Add( ( 0, 0), 1, wx.EXPAND, 5 )
 
-		self.m_panel6 = wx.Panel( self.rightPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer61.Add( self.m_panel6, 9, wx.EXPAND |wx.ALL, 5 )
+		self.results_sectionPanel = wx.Panel( self.rightPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
+		bSizer61.Add( self.results_sectionPanel, 9, wx.EXPAND |wx.ALL, 5 )
 
 
 		bSizer5.Add( bSizer61, 1, wx.EXPAND, 5 )
