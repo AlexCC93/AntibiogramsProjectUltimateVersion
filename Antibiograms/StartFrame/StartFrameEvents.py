@@ -5,7 +5,8 @@ import random
 #import the newly created GUI file
 import StartFrameModule as SFM
 
-
+import numpy as np
+import cv2
 
 class StartFrameEvents(SFM.StartFrame):  
     numHalos=0
@@ -55,4 +56,25 @@ class StartFrameEvents(SFM.StartFrame):
                 results_sectionSizer.Fit( self.results_sectionPanel )
             # calledSizer=self.GetSizer()
 
+    def StartCamera( self, event ):
+        self.leftPanel.DestroyChildren()
+        
+        
+        # cap = cv2.VideoCapture(0)
+        # while(True):
+        #     # Capture frame-by-frame
+        #     ret, frame = cap.read()
+
+        #     # Our operations on the frame come here
+            
+
+        #     # Display the resulting frame
+        #     cv2.imshow('frame',frame)
+        #     if cv2.waitKey(1) & 0xFF == ord('q'):
+        #         break
+
+        # # When everything done, release the capture
+        # cap.release()
+        # cv2.destroyAllWindows()
+        # event.Skip()
 
