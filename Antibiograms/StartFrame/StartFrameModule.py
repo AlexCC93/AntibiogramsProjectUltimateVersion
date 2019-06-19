@@ -24,7 +24,7 @@ class StartFrame ( wx.Frame ):
 		primaryBoxSizer = wx.BoxSizer( wx.HORIZONTAL )
 
 		self.leftPanel = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
-		bSizer2 = wx.BoxSizer( wx.VERTICAL )
+		CameraBoxSizer = wx.BoxSizer( wx.VERTICAL )
 
 		self.m_panel4 = wx.Panel( self.leftPanel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		buttonContainerBS = wx.BoxSizer( wx.HORIZONTAL )
@@ -38,12 +38,12 @@ class StartFrame ( wx.Frame ):
 		self.m_panel4.SetSizer( buttonContainerBS )
 		self.m_panel4.Layout()
 		buttonContainerBS.Fit( self.m_panel4 )
-		bSizer2.Add( self.m_panel4, 1, wx.ALIGN_CENTER_HORIZONTAL, 0 )
+		CameraBoxSizer.Add( self.m_panel4, 1, wx.ALIGN_CENTER_HORIZONTAL, 0 )
 
 
-		self.leftPanel.SetSizer( bSizer2 )
+		self.leftPanel.SetSizer( CameraBoxSizer )
 		self.leftPanel.Layout()
-		bSizer2.Fit( self.leftPanel )
+		CameraBoxSizer.Fit( self.leftPanel )
 		primaryBoxSizer.Add( self.leftPanel, 2, wx.EXPAND |wx.ALL, 0 )
 
 		self.rightPanel = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
@@ -139,6 +139,7 @@ class StartFrame ( wx.Frame ):
 		self.Centre( wx.BOTH )
 
 		# Connect Events
+		self.CameraON_Button.Bind( wx.EVT_BUTTON, self.StartCamera )
 		self.startRecognitionButton.Bind( wx.EVT_BUTTON, self.RunProcess )
 
 	def __del__( self ):
@@ -146,6 +147,9 @@ class StartFrame ( wx.Frame ):
 
 
 	# Virtual event handlers, overide them in your derived class
+	def StartCamera( self, event ):
+		event.Skip()
+
 	def RunProcess( self, event ):
 		event.Skip()
 
