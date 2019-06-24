@@ -4,7 +4,7 @@ import os
 import random
 #import the newly created GUI file
 import StartFrameModule as SFM
-
+from StartFrame.WebCamPanel import WebCamPanel
 import numpy as np
 import cv2
 
@@ -58,7 +58,9 @@ class StartFrameEvents(SFM.StartFrame):
 
     def StartCamera( self, event ):
         self.leftPanel.DestroyChildren()
-        
+        camera = cv2.VideoCapture(0)
+        self.leftPanel = WebCamPanel(self, camera) 
+
         
         # cap = cv2.VideoCapture(0)
         # while(True):
