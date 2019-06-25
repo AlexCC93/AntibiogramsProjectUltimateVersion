@@ -3,6 +3,8 @@ import cv2
 import numpy as np
 import os
 
+
+
 class WebCamPanel(wx.Panel):
     
     def __init__(self, parent, camera, fps=10):

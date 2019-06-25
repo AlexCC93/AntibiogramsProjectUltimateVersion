@@ -59,13 +59,15 @@ class StartFrameEvents(SFM.StartFrame):
     def StartCamera( self, event ):
         self.leftPanel.DestroyChildren()
         camera = cv2.VideoCapture(0)
+        camera.set(3, 920)
+        camera.set(4, 740)
         self.leftPanel = WebCamPanel(self, camera) 
 
         
-        # cap = cv2.VideoCapture(0)
+        # camera = cv2.Videocamerature(0)
         # while(True):
-        #     # Capture frame-by-frame
-        #     ret, frame = cap.read()
+        #     # camerature frame-by-frame
+        #     ret, frame = camera.read()
 
         #     # Our operations on the frame come here
             
@@ -75,8 +77,8 @@ class StartFrameEvents(SFM.StartFrame):
         #     if cv2.waitKey(1) & 0xFF == ord('q'):
         #         break
 
-        # # When everything done, release the capture
-        # cap.release()
+        # # When everything done, release the camerature
+        # camera.release()
         # cv2.destroyAllWindows()
         # event.Skip()
 
