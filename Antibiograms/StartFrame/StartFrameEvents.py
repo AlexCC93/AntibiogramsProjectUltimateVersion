@@ -58,9 +58,9 @@ class StartFrameEvents(SFM.StartFrame):
 
     def StartCamera( self, event ):
         self.leftPanel.DestroyChildren()
-        camera = cv2.VideoCapture(0)
-        camera.set(3, 920)
-        camera.set(4, 740)
+        camera = cv2.VideoCapture(1)
+        camera.set(3, 720)
+        camera.set(4, 780)
         self.leftPanel = WebCamPanel(self, camera) 
 
         
